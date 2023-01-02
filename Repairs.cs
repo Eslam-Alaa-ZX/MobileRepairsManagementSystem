@@ -218,5 +218,33 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Repair Deleted!!!");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Customers page = new Customers();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Parts page = new Parts();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Repairs page = new Repairs();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Login page = new Login();
+            page.Show();
+            this.Hide();
+        }
     }
 }
