@@ -88,5 +88,19 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Spare Part Deleted!!!");
             }
         }
+
+        private void PData_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            PName.Text = PData.SelectedRows[0].Cells[1].Value.ToString();
+            PCost.Text = PData.SelectedRows[0].Cells[2].Value.ToString();
+            if (PName.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(PData.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
     }
 }

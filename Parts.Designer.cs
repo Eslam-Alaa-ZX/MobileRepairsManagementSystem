@@ -84,7 +84,7 @@ namespace MobileRepairsManagementSystem
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, 706);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 680);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 60);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +244,7 @@ namespace MobileRepairsManagementSystem
             // 
             this.PData.AllowUserToAddRows = false;
             this.PData.AllowUserToDeleteRows = false;
-            this.PData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.PData.BackgroundColor = System.Drawing.Color.DimGray;
             this.PData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -254,6 +254,7 @@ namespace MobileRepairsManagementSystem
             this.PData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PData.Size = new System.Drawing.Size(708, 559);
             this.PData.TabIndex = 19;
+            this.PData.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PData_CellMouseClick);
             // 
             // Parts
             // 
