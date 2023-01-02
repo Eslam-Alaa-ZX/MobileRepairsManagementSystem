@@ -71,5 +71,22 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Customer Updated!!!");
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String Query = "Delete from CustomersTB where CustId = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowCustomers();
+                Clear();
+                MessageBox.Show("Customer Deleted!!!");
+            }
+        }
     }
 }
