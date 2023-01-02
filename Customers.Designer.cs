@@ -278,6 +278,7 @@ namespace MobileRepairsManagementSystem
             this.CData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CData.Size = new System.Drawing.Size(708, 563);
             this.CData.TabIndex = 19;
+            this.CData.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CData_CellMouseClick);
             // 
             // Customers
             // 

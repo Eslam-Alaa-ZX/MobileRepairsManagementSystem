@@ -88,5 +88,20 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Customer Deleted!!!");
             }
         }
+
+        private void CData_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            CName.Text = CData.SelectedRows[0].Cells[1].Value.ToString();
+            CPhone.Text = CData.SelectedRows[0].Cells[2].Value.ToString();
+            CAddress.Text = CData.SelectedRows[0].Cells[3].Value.ToString();
+            if (CName.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(CData.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
     }
 }
