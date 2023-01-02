@@ -71,5 +71,22 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Spare Part Updated!!!");
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String Query = "Delete from SpareTB where SpId = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowParts();
+                Clear();
+                MessageBox.Show("Spare Part Deleted!!!");
+            }
+        }
     }
 }
