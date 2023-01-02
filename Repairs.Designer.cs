@@ -97,7 +97,7 @@ namespace MobileRepairsManagementSystem
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, 706);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 688);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 60);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,6 +175,7 @@ namespace MobileRepairsManagementSystem
             this.RData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RData.Size = new System.Drawing.Size(708, 593);
             this.RData.TabIndex = 8;
+            this.RData.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RData_CellMouseClick);
             // 
             // label1
             // 
@@ -216,19 +217,20 @@ namespace MobileRepairsManagementSystem
             this.SaveBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(94, 726);
+            this.SaveBtn.Location = new System.Drawing.Point(364, 641);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(141, 37);
             this.SaveBtn.TabIndex = 16;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // DeleteBtn
             // 
             this.DeleteBtn.BackColor = System.Drawing.Color.Red;
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBtn.Location = new System.Drawing.Point(324, 726);
+            this.DeleteBtn.Location = new System.Drawing.Point(364, 696);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(141, 37);
             this.DeleteBtn.TabIndex = 18;
@@ -261,7 +263,6 @@ namespace MobileRepairsManagementSystem
             // RPhone
             // 
             this.RPhone.BackColor = System.Drawing.Color.DimGray;
-            this.RPhone.Enabled = false;
             this.RPhone.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RPhone.ForeColor = System.Drawing.Color.Black;
             this.RPhone.Location = new System.Drawing.Point(104, 346);
@@ -296,12 +297,12 @@ namespace MobileRepairsManagementSystem
             // 
             // RSpareC
             // 
-            this.RSpareC.BackColor = System.Drawing.Color.DimGray;
-            this.RSpareC.Enabled = false;
+            this.RSpareC.BackColor = System.Drawing.Color.DarkGray;
             this.RSpareC.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RSpareC.ForeColor = System.Drawing.Color.Black;
-            this.RSpareC.Location = new System.Drawing.Point(105, 676);
+            this.RSpareC.Location = new System.Drawing.Point(220, 645);
             this.RSpareC.Name = "RSpareC";
+            this.RSpareC.ReadOnly = true;
             this.RSpareC.Size = new System.Drawing.Size(130, 30);
             this.RSpareC.TabIndex = 28;
             this.RSpareC.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -392,13 +393,14 @@ namespace MobileRepairsManagementSystem
             this.RSpare.Name = "RSpare";
             this.RSpare.Size = new System.Drawing.Size(252, 34);
             this.RSpare.TabIndex = 33;
+            this.RSpare.SelectedIndexChanged += new System.EventHandler(this.RSpare_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGray;
-            this.label10.Location = new System.Drawing.Point(319, 645);
+            this.label10.Location = new System.Drawing.Point(100, 685);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 28);
             this.label10.TabIndex = 35;
@@ -409,7 +411,7 @@ namespace MobileRepairsManagementSystem
             this.RCost.BackColor = System.Drawing.Color.DimGray;
             this.RCost.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RCost.ForeColor = System.Drawing.Color.Black;
-            this.RCost.Location = new System.Drawing.Point(324, 676);
+            this.RCost.Location = new System.Drawing.Point(222, 685);
             this.RCost.Name = "RCost";
             this.RCost.Size = new System.Drawing.Size(130, 30);
             this.RCost.TabIndex = 34;
@@ -419,7 +421,7 @@ namespace MobileRepairsManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1277, 788);
+            this.ClientSize = new System.Drawing.Size(1277, 749);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.RCost);
             this.Controls.Add(this.RSpare);

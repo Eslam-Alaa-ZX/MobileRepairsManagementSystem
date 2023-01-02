@@ -27,6 +27,7 @@ namespace MobileRepairsManagementSystem
         public DataTable GetData(String Query)
         {
             dt = new DataTable();
+            Console.WriteLine(Query);
             sda = new SqlDataAdapter(Query, Con);
             sda.Fill(dt);
             return dt;
