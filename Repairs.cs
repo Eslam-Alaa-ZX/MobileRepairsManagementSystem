@@ -154,7 +154,27 @@ namespace MobileRepairsManagementSystem
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            if (RCust.SelectedIndex == -1 || RSpare.SelectedIndex == -1 || RPhone.Text == "" || RDevice.Text == "" || RDeviceM.Text == "" || RProb.Text == "" || RSpareC.Text == "" || RCost.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String date = RDate.Value.Date.ToShortDateString();
+                int customer= Convert.ToInt32(RCust.SelectedValue.ToString());
+                String phone= RPhone.Text;
+                String device = RDevice.Text;
+                String deviceM = RDeviceM.Text;
+                String problem = RProb.Text;
+                int spare = Convert.ToInt32(RSpare.SelectedValue.ToString());
+                int totalCost = Convert.ToInt32(RSpareC.Text) + Convert.ToInt32(RCost.Text);
+                String Query = "insert into RepairTB values('{0}',{1},'{2}','{3}','{4}','{5}',{6},{7})";
+                Query = string.Format(Query, date, customer, phone, device, deviceM,problem,spare,totalCost);
+                Con.SetData(Query);
+                ShowRepairs();
+                Clear();
+                MessageBox.Show("Repair Added!!!");
+            }
         }
 
         private void RSpare_SelectedIndexChanged(object sender, EventArgs e)
