@@ -212,6 +212,7 @@ namespace MobileRepairsManagementSystem
             this.SaveBtn.TabIndex = 16;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -257,7 +258,7 @@ namespace MobileRepairsManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1277, 788);
+            this.ClientSize = new System.Drawing.Size(1277, 749);
             this.Controls.Add(this.PData);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
