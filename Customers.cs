@@ -12,9 +12,16 @@ namespace MobileRepairsManagementSystem
 {
     public partial class Customers : Form
     {
+        Functions Con;
+        int key = 0;
         public Customers()
         {
             InitializeComponent();
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
