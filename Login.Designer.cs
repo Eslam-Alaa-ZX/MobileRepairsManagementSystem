@@ -101,29 +101,29 @@ namespace MobileRepairsManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(355, 176);
+            this.label2.Location = new System.Drawing.Point(379, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 28);
+            this.label2.Size = new System.Drawing.Size(106, 28);
             this.label2.TabIndex = 4;
-            this.label2.Text = "UserName:";
+            this.label2.Text = "UserName";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(355, 257);
+            this.label3.Location = new System.Drawing.Point(379, 257);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 28);
+            this.label3.Size = new System.Drawing.Size(99, 28);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Password:";
+            this.label3.Text = "Password";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.DimGray;
             this.textBox1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(392, 209);
+            this.textBox1.Location = new System.Drawing.Point(384, 207);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 30);
             this.textBox1.TabIndex = 6;
@@ -133,7 +133,7 @@ namespace MobileRepairsManagementSystem
             this.textBox2.BackColor = System.Drawing.Color.DimGray;
             this.textBox2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(392, 288);
+            this.textBox2.Location = new System.Drawing.Point(384, 288);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(252, 30);
             this.textBox2.TabIndex = 7;
@@ -144,7 +144,7 @@ namespace MobileRepairsManagementSystem
             this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(443, 360);
+            this.button1.Location = new System.Drawing.Point(437, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 37);
             this.button1.TabIndex = 8;
