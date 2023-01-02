@@ -39,7 +39,6 @@ namespace MobileRepairsManagementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.PData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.PName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@ namespace MobileRepairsManagementSystem
             this.SaveBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
+            this.PData = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -134,7 +134,7 @@ namespace MobileRepairsManagementSystem
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Location = new System.Drawing.Point(511, 122);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 623);
+            this.panel3.Size = new System.Drawing.Size(5, 605);
             this.panel3.TabIndex = 3;
             // 
             // pictureBox6
@@ -147,15 +147,6 @@ namespace MobileRepairsManagementSystem
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
-            // 
-            // PData
-            // 
-            this.PData.BackgroundColor = System.Drawing.Color.DimGray;
-            this.PData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PData.Location = new System.Drawing.Point(544, 140);
-            this.PData.Name = "PData";
-            this.PData.Size = new System.Drawing.Size(708, 593);
-            this.PData.TabIndex = 8;
             // 
             // label1
             // 
@@ -246,12 +237,28 @@ namespace MobileRepairsManagementSystem
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
             // 
+            // PData
+            // 
+            this.PData.AllowUserToAddRows = false;
+            this.PData.AllowUserToDeleteRows = false;
+            this.PData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.PData.BackgroundColor = System.Drawing.Color.DimGray;
+            this.PData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PData.Location = new System.Drawing.Point(545, 141);
+            this.PData.Name = "PData";
+            this.PData.ReadOnly = true;
+            this.PData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PData.Size = new System.Drawing.Size(708, 559);
+            this.PData.TabIndex = 19;
+            // 
             // Parts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1277, 749);
+            this.ClientSize = new System.Drawing.Size(1277, 788);
+            this.Controls.Add(this.PData);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.SaveBtn);
@@ -260,7 +267,6 @@ namespace MobileRepairsManagementSystem
             this.Controls.Add(this.PName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PData);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -295,7 +301,6 @@ namespace MobileRepairsManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.DataGridView PData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox PName;
         private System.Windows.Forms.Label label2;
@@ -304,5 +309,6 @@ namespace MobileRepairsManagementSystem
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.DataGridView PData;
     }
 }
