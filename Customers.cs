@@ -17,11 +17,12 @@ namespace MobileRepairsManagementSystem
         public Customers()
         {
             InitializeComponent();
+            Con =new Functions();
             ShowCustomers();
         }
         private void ShowCustomers()
         {
-            String Query = "Select * from CustomersTB";
+            String Query = "Select * from CustomerTB";
             CData.DataSource = Con.GetData(Query);
         }
 
@@ -43,7 +44,7 @@ namespace MobileRepairsManagementSystem
                 String name = CName.Text;
                 String phone = CPhone.Text;
                 String address = CAddress.Text;
-                String Query = "insert into CustomersTB values('{0}','{1}','{2}')";
+                String Query = "insert into CustomerTB values('{0}','{1}','{2}')";
                 Query = string.Format(Query, name, phone,address);
                 Con.SetData(Query);
                 ShowCustomers();
@@ -63,7 +64,7 @@ namespace MobileRepairsManagementSystem
                 String name = CName.Text;
                 String phone = CPhone.Text;
                 String address = CAddress.Text;
-                String Query = "Update CustomersTB set CustName='{0}',CustPhone='{1}',CustAdd='{2}' where CustId={3}";
+                String Query = "Update CustomerTB set CustName='{0}',CustPhone='{1}',CustAdd='{2}' where CustId = {3}";
                 Query = string.Format(Query, name, phone, address,key);
                 Con.SetData(Query);
                 ShowCustomers();
@@ -80,7 +81,7 @@ namespace MobileRepairsManagementSystem
             }
             else
             {
-                String Query = "Delete from CustomersTB where CustId = {0}";
+                String Query = "Delete from CustomerTB where CustId = {0}";
                 Query = string.Format(Query, key);
                 Con.SetData(Query);
                 ShowCustomers();
@@ -102,6 +103,34 @@ namespace MobileRepairsManagementSystem
             {
                 key = Convert.ToInt32(CData.SelectedRows[0].Cells[0].Value.ToString());
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Customers page = new Customers();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Parts page = new Parts();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Repairs page = new Repairs();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Login page = new Login();
+            page.Show();
+            this.Hide();
         }
     }
 }
