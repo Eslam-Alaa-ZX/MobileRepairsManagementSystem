@@ -191,7 +191,7 @@ namespace MobileRepairsManagementSystem
             RDeviceM.Text = RData.SelectedRows[0].Cells[5].Value.ToString();
             RProb.Text = RData.SelectedRows[0].Cells[6].Value.ToString();
             RSpare.SelectedValue = RData.SelectedRows[0].Cells[7].Value.ToString();
-            RCost.Text = RData.SelectedRows[0].Cells[8].Value.ToString();
+            RCost.Text = (Convert.ToInt32(RData.SelectedRows[0].Cells[8].Value.ToString())-Convert.ToInt32(RSpareC.Text)).ToString();
             if (RSpareC.Text == "")
             {
                 key = 0;
@@ -199,6 +199,23 @@ namespace MobileRepairsManagementSystem
             else
             {
                 key = Convert.ToInt32(RData.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String Query = "Delete from RepairTB where RepId = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowRepairs();
+                Clear();
+                MessageBox.Show("Repair Deleted!!!");
             }
         }
     }
