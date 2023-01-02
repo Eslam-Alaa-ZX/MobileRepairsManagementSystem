@@ -225,6 +225,7 @@ namespace MobileRepairsManagementSystem
             this.UpdateBtn.TabIndex = 17;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 

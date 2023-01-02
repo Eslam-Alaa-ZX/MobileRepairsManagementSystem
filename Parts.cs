@@ -52,5 +52,24 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Spare Part Added!!!");
             }
         }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (PName.Text == "" || PCost.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String name = PName.Text;
+                int cost = Convert.ToInt32(PCost.Text);
+                String Query = "Update SpareTB set SpName = '{0}',SpCost = {1} where SpId = {2}";
+                Query = string.Format(Query, name, cost,key);
+                Con.SetData(Query);
+                ShowParts();
+                Clear();
+                MessageBox.Show("Spare Part Updated!!!");
+            }
+        }
     }
 }
