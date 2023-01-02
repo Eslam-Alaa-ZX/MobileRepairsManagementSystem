@@ -17,11 +17,39 @@ namespace MobileRepairsManagementSystem
         public Customers()
         {
             InitializeComponent();
+            ShowCustomers();
+        }
+        private void ShowCustomers()
+        {
+            String Query = "Select * from CustomersTB";
+            CData.DataSource = Con.GetData(Query);
+        }
+
+        private void Clear()
+        {
+            CName.Text = "";
+            CPhone.Text = "";
+            CAddress.Text = "";
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            if (CName.Text == "" || CPhone.Text == "" || CAddress.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String name = CName.Text;
+                String phone = CPhone.Text;
+                String address = CAddress.Text;
+                String Query = "insert into CustomersTB values('{0}','{1}','{2}')";
+                Query = string.Format(Query, name, phone,address);
+                Con.SetData(Query);
+                ShowCustomers();
+                Clear();
+                MessageBox.Show("Customer Added!!!");
+            }
         }
     }
 }
