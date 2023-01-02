@@ -51,5 +51,25 @@ namespace MobileRepairsManagementSystem
                 MessageBox.Show("Customer Added!!!");
             }
         }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (CName.Text == "" || CPhone.Text == "" || CAddress.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String name = CName.Text;
+                String phone = CPhone.Text;
+                String address = CAddress.Text;
+                String Query = "Update CustomersTB set CustName='{0}',CustPhone='{1}',CustAdd='{2}' where CustId={3}";
+                Query = string.Format(Query, name, phone, address,key);
+                Con.SetData(Query);
+                ShowCustomers();
+                Clear();
+                MessageBox.Show("Customer Updated!!!");
+            }
+        }
     }
 }

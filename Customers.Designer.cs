@@ -249,6 +249,7 @@ namespace MobileRepairsManagementSystem
             this.UpdateBtn.TabIndex = 17;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -282,7 +283,7 @@ namespace MobileRepairsManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1277, 788);
+            this.ClientSize = new System.Drawing.Size(1277, 749);
             this.Controls.Add(this.CData);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
